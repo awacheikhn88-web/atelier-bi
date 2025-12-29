@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWA NDAO COUTURE BY BINETTE</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff0f5; /* rose clair */
+            color: #000;
+        }
+
+        header {
+            background-color: #ff1493; /* rose vif */
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2em;
+        }
+
+        nav {
+            background-color: #000; /* noir */
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        nav a {
+            margin: 0 20px;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1em;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #ff1493; /* rose vif */
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.1em;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .gallery {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .gallery img {
+            width: 250px;
+            margin: 10px;
+            border-radius: 10px;
+            border: 3px solid #000; /* bord noir */
+        }
+
+        form {
+            max-width: 500px;
+            margin: auto;
+            text-align: left;
+        }
+
+        input, textarea, select {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #ff1493; /* rose vif */
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #ff1493; /* rose vif */
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
+        button:hover {
+            background-color: #e6007e; /* rose foncé */
+        }
+
+        footer {
+            background-color: #000; /* noir */
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        /* Animation bienvenue */
+        .welcome {
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+    </style>
+</head>
+<body>
+
+<header class="welcome">
+    <h1>Bienvenue chez AWA NDAO COUTURE BY BINETTE</h1>
+    <p>Grand Mbao côté école El Hadji Babacar Cissé   </p>
+</header>
+
+<nav>
+    <a href="#presentation">Présentation</a>
+    <a href="#gallery">Galerie</a>
+    <a href="#order">Commande</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section id="presentation">
+    <h2>Présentation de l'Atelier</h2>
+    <p>
+        AWA NDAO COUTURE BY BINETTE est un atelier spécialisé dans la confection de vêtements sur mesure. 
+        Nous allions créativité, élégance et qualité pour vous offrir des pièces uniques qui vous ressemblent. 
+        Que ce soit pour des robes, des tenues traditionnelles ou des costumes modernes, notre équipe met son savoir-faire à votre service.
+    </p>
+    <div class="gallery">
+        <img src="modele1.jpg.jpg" alt="Atelier 1">
+        <img src="WhatsApp Image 2025-12-28 at 18.55.19.jpeg" alt="Atelier 2">
+        <img src="https://via.placeholder.com/250x300.png?text=Atelier+3" alt="Atelier 3">
+    </div>
+</section>
+
+<section id="gallery">
+    <h2>Galerie des créations</h2>
+    <div class="gallery">
+        <img src="https://via.placeholder.com/250x300.png?text=Robe+1" alt="Robe 1">
+        <img src="https://via.placeholder.com/250x300.png?text=Robe+2" alt="Robe 2">
+        <img src="https://via.placeholder.com/250x300.png?text=Robe+3" alt="Robe 3">
+    </div>
+</section>
+
+<section id="order">
+    <h2>Passer une commande</h2>
+    <form id="orderForm">
+        <label for="name">Nom complet:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Téléphone:</label>
+        <input type="tel" id="phone" name="phone" required>
+
+        <label for="fabric">Type de tissu:</label>
+        <input type="text" id="fabric" name="fabric" required>
+
+        <label for="color">Couleur du tissu:</label>
+        <input type="text" id="color" name="color" required>
+
+        <label for="deposit">Acompte:</label>
+        <select id="deposit" name="deposit" required>
+            <option value="5000">5000 F (Vous apportez le tissu)</option>
+            <option value="15000">15000 F (Tissu fourni par l'atelier)</option>
+        </select>
+
+        <label for="details">Détails de la commande:</label>
+        <textarea id="details" name="details" rows="4" required></textarea>
+
+        <button type="submit">Envoyer la commande</button>
+      <!-- MESSAGE DE REMERCIEMENT -->
+<section id="merci" class="hidden">
+    <h2>Merci !</h2>
+    <p>Votre commande a été prise en compte avec succès.</p>
+    <p>Nous vous remercions pour votre confiance !</p>
+    <p>Vous pouvez maintenant envoyer les détails via WhatsApp pour finaliser votre commande.</p>
+    <a id="whatsappLink" href="" target="_blank">
+        <button>Envoyer sur WhatsApp</button>
+    </a>
+</section>
+
+    </form>
+</section>
+
+<section id="contact">
+    <h2>Contactez-nous</h2>
+    <p>Téléphone: +221 78-423-49-97</p>
+    <p>Email: contact@awandao-couture.com</p>
+    <p>Adresse: Grand Mbao côté école El Hadji Babacar Cissé, Dakar, Sénégal</p>
+</section>
+
+<footer>
+    &copy; 2025 AWA NDAO COUTURE BY BINETTE. Tous droits réservés.
+</footer>
+
+<script>
+    // Gestion du formulaire
+    document.getElementById('orderForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        alert('Merci pour votre commande ! Nous vous contacterons bientôt.');
+        this.reset();
+    });
+</script>
+
+</body>
+</html>
